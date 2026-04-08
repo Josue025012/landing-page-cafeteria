@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+header {    
+    color: white;
+    background-color: rgb(168, 80, 18);
+    height: 60px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        color: white;
+        margin: 0 4px;
+        text-decoration: none;
+    }
+}
+
+.logo {
+    font-family: "Google Sans Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.hero {
+    width: 100%;
+    height: 50vh;
+    padding: 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    backdrop-filter: blur(20px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    h1, p {
+        color: white;
+        text-align: center;
+        margin: 6px 0px;
+    }
+
+    ::before {
+        content: "";
+        background-image: url('background-header.jpg');
+        background-size: cover;
+        filter: blur(3px);
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        z-index: -1;
+      }
+}
+
+#menu {
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
+}
+
+.item {
+    background-color: gray;
+    background-color: rgb(168, 80, 18);
+    color: white;
+
+    max-width: 300px;
+
+    padding: 12px;
+    border-radius: 20px;
+
+    transition: 0.1s all ease;
+
+    .coffee_img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    &:hover{
+        translate: 0px -2px;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: gray;
+    color: white;
+    margin-top: 20px;
+}
