@@ -17,6 +17,11 @@ header {
     height: 60px;
     padding: 20px;
 
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,26 +73,26 @@ header {
 }
 
 #menu {
-    width: 100%;
+    /* width: minmax(40px, 20px); */
+    /* width: 200px; */
+    width: 800px;
     padding: 10px;
+    gap: 12px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: auto auto auto;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .item {
     background-color: gray;
     background-color: rgb(168, 80, 18);
     color: white;
-
-    max-width: 300px;
-
     padding: 12px;
     border-radius: 20px;
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 6px 0px;
 
     transition: 0.1s all ease;
 
@@ -105,5 +110,5 @@ footer {
     text-align: center;
     background-color: gray;
     color: white;
-    margin-top: 20px;
+    margin-top: 8px;
 }
